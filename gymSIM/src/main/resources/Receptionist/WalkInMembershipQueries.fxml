@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="493.0" prefWidth="597.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="Receptionist.WalkInMembershipQueryController">
+    <children>
+        <CheckBox fx:id="cbShortTerm" layoutX="124.0" layoutY="94.0" text="Short-Term Plans" />
+        <CheckBox fx:id="cbLongTerm" layoutX="255.0" layoutY="94.0" text="Long-Term Plans" />
+        <CheckBox fx:id="cbStudentDiscount" layoutX="388.0" layoutY="94.0" text="Student Discount" />
+        <Button layoutX="54.0" layoutY="247.0" onAction="#findPlansButtonOnClick" prefHeight="26.0" prefWidth="112.0" text="Find Plans" />
+        <TableView fx:id="PlanTableView" layoutX="206.0" layoutY="247.0" prefHeight="231.0" prefWidth="338.0">
+            <columns>
+                <TableColumn fx:id="planNameCol" prefWidth="116.00000762939453" text="Plan Name" />
+                <TableColumn fx:id="durationCol" prefWidth="100.0" text="Duration" />
+                <TableColumn fx:id="priceCol" prefWidth="124.0" text="Price" />
+            </columns>
+        </TableView>
+        <Label fx:id="lblPlanDetails" layoutX="30" layoutY="270" />
+      <Label layoutX="45.0" layoutY="94.0" text="Preferences :" />
+      <Text layoutX="160.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Membership Information" wrappingWidth="301.336669921875">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Text>
+      <Label layoutX="60.0" layoutY="134.0" text="Duration :" />
+      <ComboBox fx:id="durationComboBox" layoutX="124.0" layoutY="130.0" prefWidth="150.0" promptText="Select time" />
+      <Label layoutX="78.0" layoutY="184.0" text="Price :" />
+      <ComboBox fx:id="priceComboBox" layoutX="124.0" layoutY="180.0" prefWidth="150.0" promptText="select package" />
+    </children>
+</AnchorPane>

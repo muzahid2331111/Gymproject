@@ -1,0 +1,29 @@
+package Dietetian;
+
+public class DefineFitnessNutritionObjsController
+{
+    @javafx.fxml.FXML
+    private TextField memberIDTextField;
+    @javafx.fxml.FXML
+    private TextArea fitnessGoalsTextArea;
+    @javafx.fxml.FXML
+    private TextArea txtNutritionGoals;
+    @javafx.fxml.FXML
+    private TextField heightTextField;
+    @javafx.fxml.FXML
+    private Label outputResultLabel;
+    @javafx.fxml.FXML
+    private Label weightTextField;
+
+    @javafx.fxml.FXML
+    public void initialize() {
+    }
+
+    @javafx.fxml.FXML
+    public void saveObjectivesButtonOnClick(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void verifyButtonOnClick(ActionEvent actionEvent) {
+    }
+}
