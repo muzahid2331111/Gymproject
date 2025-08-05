@@ -7,12 +7,17 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
 public class BookingIssuesController {
-
+    @javafx.fxml.FXML
     private TableView<BookingSession> sessionListTableView;
+    @javafx.fxml.FXML
     private TableColumn<BookingSession, String> sessionIDCol;
+    @javafx.fxml.FXML
     private TableColumn<BookingSession, String> timeCol;
+    @javafx.fxml.FXML
     private TableColumn<BookingSession, String> statusCol;
+    @javafx.fxml.FXML
     private TextField searchMemberTextField;
+    @javafx.fxml.FXML
     private Label outputShowBookingInfoLabel;
 
     private ObservableList<BookingSession> bookingData = FXCollections.observableArrayList();
@@ -33,6 +38,7 @@ public class BookingIssuesController {
         sessionListTableView.setItems(bookingData);
     }
 
+    @FXML
     public void updateBookingButtonOnClick(ActionEvent actionEvent) {
         String name = searchMemberTextField.getText().trim();
         if (!name.isEmpty()) {
@@ -47,6 +53,7 @@ public class BookingIssuesController {
         }
     }
 
+    @FXML
     public void cancelBookingButtonOnClick(ActionEvent actionEvent) {
         BookingSession selected = sessionListTableView.getSelectionModel().getSelectedItem();
         if (selected != null) {

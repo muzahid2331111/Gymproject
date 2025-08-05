@@ -8,33 +8,25 @@ public class BookingSession {
     private final StringProperty time;
     private final StringProperty status;
 
-    public BookingSession(StringProperty sessionID, StringProperty time, StringProperty status) {
-        this.sessionID = sessionID;
-        this.time = time;
-        this.status = status;
-    }
-
-    public String getSessionID() {
-        return sessionID.get();
+    public BookingSession(String sessionID, String time, String status) {
+        this.sessionID = new SimpleStringProperty(sessionID);
+        this.time = new SimpleStringProperty(time);
+        this.status = new SimpleStringProperty(status);
     }
 
     public StringProperty sessionIDProperty() {
         return sessionID;
     }
 
-    public String getTime() {
-        return time.get();
-    }
-
     public StringProperty timeProperty() {
         return time;
     }
 
-    public String getStatus() {
-        return status.get();
-    }
-
     public StringProperty statusProperty() {
         return status;
+    }
+
+    public String getSessionID() {
+        return sessionID.get();
     }
 }

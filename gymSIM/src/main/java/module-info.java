@@ -1,8 +1,8 @@
-module com.example.gymsim {
+module Receptionist {
     requires javafx.controls;
     requires javafx.fxml;
 
 
-    opens com.example.gymsim to javafx.fxml;
-    exports com.example.gymsim;
+    opens  Receptionist to javafx.fxml;
+    exports Receptionist;
 }
