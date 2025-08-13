@@ -1,5 +1,6 @@
 package Dietetian;
 
+import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
@@ -9,14 +10,18 @@ public class EducateNutritionPrinciplesController
 {
 
     @javafx.fxml.FXML
-    private Button publishButtonOnClick;
-    @javafx.fxml.FXML
     private TextArea educationContentTextArea;
     @javafx.fxml.FXML
-    private ComboBox topicComboBox;
+    private ComboBox<String> topicComboBox;
     @javafx.fxml.FXML
     private Label outputContentLabel;
 
     @javafx.fxml.FXML
     public void initialize() {
-    }}
+        topicComboBox.getItems().addAll("Macronutrients", "Micronutrients", "Hydration", "Energy Balance", "Meal Timing", "Dietary Patterns");
+    }
+
+    @javafx.fxml.FXML
+    public void publishButtonOnClick(ActionEvent actionEvent) {
+    }
+}

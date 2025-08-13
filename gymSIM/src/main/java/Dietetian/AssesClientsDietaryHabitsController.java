@@ -12,8 +12,6 @@ public class AssesClientsDietaryHabitsController
     private TextField memberIDTextField;
     @javafx.fxml.FXML
     private TextArea dietPlanTextArea;
-    @javafx.fxml.FXML
-    private Label assignmentStatusLabel;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -21,5 +19,9 @@ public class AssesClientsDietaryHabitsController
 
     @javafx.fxml.FXML
     public void assignButtonOnClick(ActionEvent actionEvent) {
+        String memberID = memberIDTextField.getText();
+        String dietPlan = dietPlanTextArea.getText();
+        DietaryHabits diethabit = new DietaryHabits("memberID", "dietPlan");
     }
+
 }
