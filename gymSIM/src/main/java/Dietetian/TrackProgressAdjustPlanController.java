@@ -43,24 +43,43 @@ public class TrackProgressAdjustPlanController
         dateCol.setCellValueFactory(new PropertyValueFactory<>("date"));
         bmiCol.setCellValueFactory(new PropertyValueFactory<>("BMI"));
         fatCol.setCellValueFactory(new PropertyValueFactory<>("fat%"));
-
-        ArrayList<TrackProgress> trackProgressesList = new ArrayList<>();
     }
+    ArrayList<TrackProgress> trackProgressesList = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void trackProgressButtonOnClick(ActionEvent actionEvent) {
+        if (memberIDTextField.getText().trim().isEmpty()){
+            outputRecomandLabel.setText("Please enter name");
+            return;
+        }
+        if (heightTextField.getText().trim().isEmpty()){
+            outputRecomandLabel.setText("Please add height");
+            return;
+        }
+        if (dateDatePicker.getValue() == null){
+            outputRecomandLabel.setText("Please choose date");
+            return;
+        }
+        if (weightTextField.getText().trim().isEmpty()) {
+            outputRecomandLabel.setText("Please add weight");
+            return;
+        }
+
         String memberID = memberIDTextField.getText();
         int height = Integer.parseInt(heightCol.getText());
         int weight = Integer.parseInt(weightTextField.getText());
         LocalDate date = dateDatePicker.getValue();
 
         TrackProgress trackProgress = new TrackProgress(memberID, height, weight, date);
+        trackProgressesList.add(trackProgress);
+        trackProgressTableView.getItems().clear();
+        trackProgressTableView.getItems().addAll(trackProgressesList);
 
 
     }
 
     @javafx.fxml.FXML
     public void adjustPlanButtonOnClick(ActionEvent actionEvent) {
-        outputRecomandLabel.setText(trackProgressTableView);
+        outputRecomandLabel.setText("plan saved");
     }
 }
