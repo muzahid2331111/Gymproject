@@ -42,7 +42,6 @@ public class BookingIssuesController {
     public void updateBookingButtonOnClick(ActionEvent actionEvent) {
         String name = searchMemberTextField.getText().trim();
         if (!name.isEmpty()) {
-            // Simulate updating a booking for demo purposes
             BookingSession newSession = new BookingSession("S104", "1:00 PM", "Booked");
             bookingData.add(newSession);
             sessionListTableView.setItems(bookingData);

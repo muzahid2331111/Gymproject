@@ -6,8 +6,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
-public class RespondToPhoneIquiriesController
-{
+import java.util.ArrayList;
+
+public class RespondToPhoneIquiriesController {
     @javafx.fxml.FXML
     private Label lblSearchResult;
     @javafx.fxml.FXML
@@ -21,7 +22,15 @@ public class RespondToPhoneIquiriesController
     public void initialize() {
     }
 
+    ArrayList<RespondPhone> respondList = new ArrayList();
+
     @javafx.fxml.FXML
     public void SearchButtonOnClick(ActionEvent actionEvent) {
+        String name = txtCallerName.getText();
+        String details = inqueryDetailsTextField.getText();
+        RespondPhone respondPhone = new RespondPhone(name, details);
+        respondList.add(respondPhone);
+
+
     }
 }
