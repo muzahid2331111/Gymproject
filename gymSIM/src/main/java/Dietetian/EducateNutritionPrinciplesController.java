@@ -23,5 +23,8 @@ public class EducateNutritionPrinciplesController
 
     @javafx.fxml.FXML
     public void publishButtonOnClick(ActionEvent actionEvent) {
+        String topic = topicComboBox.getValue();
+        String content = educationContentTextArea.getText();
+
     }
 }

@@ -1,5 +1,6 @@
 package Dietetian;
 
+import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
@@ -9,7 +10,7 @@ public class SupplementStrategyController
 {
 
     @javafx.fxml.FXML
-    private ComboBox supplementComboBox;
+    private ComboBox<String> supplementComboBox;
     @javafx.fxml.FXML
     private TextField timingTextField;
     @javafx.fxml.FXML
@@ -17,10 +18,22 @@ public class SupplementStrategyController
     @javafx.fxml.FXML
     private TextField memberIDTextField;
     @javafx.fxml.FXML
-    private Button saveStrategyButtonOnClick;
-    @javafx.fxml.FXML
     private TextField dosageTextField;
 
     @javafx.fxml.FXML
     public void initialize() {
-    }}
+        supplementComboBox.getItems().addAll("Performance & Recovery", "Health & Wellness", "Pre-Workout Enhancement", "Hydration & Electrolytes", " Special Considerations", "Timing & Integration");
+    }
+
+    @javafx.fxml.FXML
+    public void saveStrategyButtonOnClick(ActionEvent actionEvent) {
+        String memberID = memberIDTextField.getText();
+        String timing = timingTextField.getText();
+        int dosage = Integer.parseInt(dosageTextField.getText());
+        String supplement = supplementComboBox.getValue();
+
+        Supplement supply = new Supplement(memberID, dosage, timing, supplement);
+
+
+    }
+}

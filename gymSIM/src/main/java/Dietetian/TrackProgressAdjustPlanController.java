@@ -2,6 +2,10 @@ package Dietetian;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class TrackProgressAdjustPlanController
 {
@@ -11,35 +15,52 @@ public class TrackProgressAdjustPlanController
     @javafx.fxml.FXML
     private DatePicker dateDatePicker;
     @javafx.fxml.FXML
-    private TableColumn dateCol;
+    private TableColumn<LocalDate, TrackProgress> dateCol;
     @javafx.fxml.FXML
     private TextField memberIDTextField;
     @javafx.fxml.FXML
-    private TableColumn memberIDCol;
+    private TableColumn<String , TrackProgress> memberIDCol;
     @javafx.fxml.FXML
-    private TableColumn bmiCol;
+    private TableColumn<Integer, TrackProgress> bmiCol;
     @javafx.fxml.FXML
     private TextField heightTextField;
     @javafx.fxml.FXML
-    private TableColumn heightCol;
+    private TableColumn<Integer, TrackProgress> heightCol;
     @javafx.fxml.FXML
-    private TableColumn fatCol;
+    private TableColumn<Integer, TrackProgress> fatCol;
     @javafx.fxml.FXML
-    private TableView trackProgressTableView;
+    private TableView<TrackProgress> trackProgressTableView;
     @javafx.fxml.FXML
-    private TableColumn weightCol;
+    private TableColumn<Integer , TrackProgress> weightCol;
     @javafx.fxml.FXML
     private TextField weightTextField;
 
     @javafx.fxml.FXML
     public void initialize() {
+        memberIDCol.setCellValueFactory(new PropertyValueFactory<>("memberID"));
+        heightCol.setCellValueFactory(new PropertyValueFactory<>("height"));
+        weightCol.setCellValueFactory(new PropertyValueFactory<>("weight"));
+        dateCol.setCellValueFactory(new PropertyValueFactory<>("date"));
+        bmiCol.setCellValueFactory(new PropertyValueFactory<>("BMI"));
+        fatCol.setCellValueFactory(new PropertyValueFactory<>("fat%"));
+
+        ArrayList<TrackProgress> trackProgressesList = new ArrayList<>();
     }
 
     @javafx.fxml.FXML
     public void trackProgressButtonOnClick(ActionEvent actionEvent) {
+        String memberID = memberIDTextField.getText();
+        int height = Integer.parseInt(heightCol.getText());
+        int weight = Integer.parseInt(weightTextField.getText());
+        LocalDate date = dateDatePicker.getValue();
+
+        TrackProgress trackProgress = new TrackProgress(memberID, height, weight, date);
+
+
     }
 
     @javafx.fxml.FXML
     public void adjustPlanButtonOnClick(ActionEvent actionEvent) {
+        outputRecomandLabel.setText(trackProgressTableView);
     }
 }

@@ -26,6 +26,7 @@ public class DefineFitnessNutritionObjsController
 
     @javafx.fxml.FXML
     public void saveObjectivesButtonOnClick(ActionEvent actionEvent) {
+
     }
 
     @javafx.fxml.FXML

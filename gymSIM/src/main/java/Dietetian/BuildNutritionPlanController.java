@@ -26,7 +26,7 @@ public class BuildNutritionPlanController
         String memberID = memberIDTextField.getText();
         String mealPlan = mealPlanComboBox.getValue();
         String planDetails = planDetailsTextArea.getText();
-        NutritionPlan plan = new NutritionPlan("memberID", "planDetails" , "plan");
+        NutritionPlan plan = new NutritionPlan(memberID, planDetails , planDetails);
 
     }
 }

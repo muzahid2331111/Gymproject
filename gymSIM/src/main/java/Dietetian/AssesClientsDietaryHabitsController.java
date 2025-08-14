@@ -21,7 +21,7 @@ public class AssesClientsDietaryHabitsController
     public void assignButtonOnClick(ActionEvent actionEvent) {
         String memberID = memberIDTextField.getText();
         String dietPlan = dietPlanTextArea.getText();
-        DietaryHabits diethabit = new DietaryHabits("memberID", "dietPlan");
+        DietaryHabits diethabit = new DietaryHabits(memberID, dietPlan);
     }
 
 }
