@@ -1,13 +1,12 @@
 package Receptionist;
 
 public class NewMember {
-    String receptionistID, memberName, gender;
+    String receptionistID, memberName;
     int age, contact;
 
-    public NewMember(String receptionistID, String memberName, String gender, int age, int contact) {
+    public NewMember(String receptionistID, String memberName, int age, int contact) {
         this.receptionistID = receptionistID;
         this.memberName = memberName;
-        this.gender = gender;
         this.age = age;
         this.contact = contact;
     }
@@ -26,14 +25,6 @@ public class NewMember {
 
     public void setMemberName(String memberName) {
         this.memberName = memberName;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
     }
 
     public int getAge() {

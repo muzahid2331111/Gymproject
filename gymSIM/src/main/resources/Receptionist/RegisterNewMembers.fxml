@@ -39,12 +39,13 @@
          </font>
       </Text>
       <Label layoutX="15.0" layoutY="246.0" text="Gender" />
-      <RadioButton layoutX="82.0" layoutY="246.0" mnemonicParsing="false" text="Male">
+      <RadioButton fx:id="maleRadioButton" layoutX="82.0" layoutY="246.0" mnemonicParsing="false" text="Male">
          <toggleGroup>
             <ToggleGroup fx:id="Gender" />
          </toggleGroup>
       </RadioButton>
-      <RadioButton layoutX="146.0" layoutY="246.0" mnemonicParsing="false" text="Female" toggleGroup="$Gender" />
-      <RadioButton layoutX="223.0" layoutY="246.0" mnemonicParsing="false" text="Other" toggleGroup="$Gender" />
+      <RadioButton fx:id="femaleRadioButton" layoutX="146.0" layoutY="246.0" mnemonicParsing="false" text="Female" toggleGroup="$Gender" />
+      <RadioButton fx:id="otherRadioButton" layoutX="223.0" layoutY="246.0" mnemonicParsing="false" text="Other" toggleGroup="$Gender" />
+      <Button layoutX="18.0" layoutY="542.0" mnemonicParsing="false" onAction="#backButtonOnClick" text="&lt;&lt;Back" />
    </children>
 </AnchorPane>

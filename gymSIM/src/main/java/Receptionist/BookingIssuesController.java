@@ -4,7 +4,14 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class BookingIssuesController {
     @javafx.fxml.FXML
@@ -61,5 +68,14 @@ public class BookingIssuesController {
         } else {
             outputShowBookingInfoLabel.setText("Please select a booking to cancel.");
         }
+    }
+    @javafx.fxml.FXML
+    public void backButtonOnClick(ActionEvent actionEvent) throws IOException {
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("Receptionist.fxml"));
+        Scene scene = new Scene(root);
+        stage.setTitle("Vogue Gold's Gym Lifestyle Lounge");
+        stage.setScene(scene);
+        stage.show();
     }
 }

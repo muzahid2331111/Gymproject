@@ -19,5 +19,6 @@
          </font>
       </Text>
       <Label fx:id="outputSearchedInfoLabel" layoutX="24.0" layoutY="364.0" prefHeight="62.0" prefWidth="402.0" />
+      <Button layoutX="14.0" layoutY="445.0" mnemonicParsing="false" onAction="#backButtonOnClick" text="&lt;&lt;Back" />
     </children>
 </AnchorPane>

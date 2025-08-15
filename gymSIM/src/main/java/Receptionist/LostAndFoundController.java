@@ -1,10 +1,16 @@
 package Receptionist;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 import javax.swing.*;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class LostAndFoundController
@@ -37,15 +43,20 @@ public class LostAndFoundController
         } else{
             outputDisplayReferenceIDLabel.setText("item's not found");
 
-
-
-
-
-
         }
     }
 
     @javafx.fxml.FXML
     public void logEntryButtonOnClick(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void backButtonOnClick(ActionEvent actionEvent) throws IOException {
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("Receptionist.fxml"));
+        Scene scene = new Scene(root);
+        stage.setTitle("Vogue Gold's Gym Lifestyle Lounge");
+        stage.setScene(scene);
+        stage.show();
     }
 }

@@ -18,6 +18,5 @@
          </font>
       </Text>
       <Button layoutX="20.0" layoutY="390.0" mnemonicParsing="false" onAction="#backButtonOnClick" text="&lt;&lt;Back" />
-      <Button layoutX="430.0" layoutY="390.0" mnemonicParsing="false" onAction="#nextButtonOnClick" text="Next&gt;&gt;" />
     </children>
 </AnchorPane>

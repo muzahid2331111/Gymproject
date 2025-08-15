@@ -32,15 +32,11 @@ public class AssesClientsDietaryHabitsController
     }
 
     @javafx.fxml.FXML
-    public void nextButtonOnClick(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
     public void backButtonOnClick(ActionEvent actionEvent) throws IOException {
         Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("DashBoard.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Dietitian.fxml"));
         Scene scene = new Scene(root);
-        stage.setTitle("DashBoard");
+        stage.setTitle("Vogue Gold's Gym Lifestyle Lounge");
         stage.setScene(scene);
         stage.show();
     }
