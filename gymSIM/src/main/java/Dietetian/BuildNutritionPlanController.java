@@ -12,6 +12,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class BuildNutritionPlanController
 {
@@ -27,6 +28,7 @@ public class BuildNutritionPlanController
     public void initialize() {
         mealPlanComboBox.getItems().addAll("Standard Gym Diet" , "High Protein Diet" , "Low Carb Diet" , "Ketogenic Diet" , "Vegan / Plant-Based Diet" , "Vegetarian Diet" , "Paleo Diet" , "Gluten-Free Diet" , "Dairy-Free Diet");
     }
+    ArrayList<NutritionPlan> nutritionPlanList = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void buildPlanButtonOnClick(ActionEvent actionEvent) {
@@ -34,6 +36,7 @@ public class BuildNutritionPlanController
         String mealPlan = mealPlanComboBox.getValue();
         String planDetails = planDetailsTextArea.getText();
         NutritionPlan plan = new NutritionPlan(memberID, planDetails , planDetails);
+        nutritionPlanList.add(plan);
 
     }
     @javafx.fxml.FXML

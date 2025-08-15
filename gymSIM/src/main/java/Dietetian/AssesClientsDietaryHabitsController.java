@@ -11,6 +11,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class AssesClientsDietaryHabitsController
 {
@@ -23,12 +24,13 @@ public class AssesClientsDietaryHabitsController
     @javafx.fxml.FXML
     public void initialize() {
     }
-
+ArrayList<DietaryHabits> dietaryHabitsList = new ArrayList<>();
     @javafx.fxml.FXML
     public void assignButtonOnClick(ActionEvent actionEvent) {
         String memberID = memberIDTextField.getText();
         String dietPlan = dietPlanTextArea.getText();
         DietaryHabits diethabit = new DietaryHabits(memberID, dietPlan);
+        dietaryHabitsList.add(diethabit);
     }
 
     @javafx.fxml.FXML
