@@ -3,17 +3,15 @@ package Dietetian;
 import java.time.LocalDate;
 
 public class TrackProgress {
-    private String memberID;
-    private double height; //cm
-    private double weight; //kg
-    private double bmi;
-    LocalDate date;
+    private String memberID ;
+    private int height ; //cm
+    private int weight; //kg
+    LocalDate date ;
 
-    public TrackProgress(String memberID, double height, double weight, double bmi, LocalDate date) {
+    public TrackProgress(String memberID, int height, int weight, LocalDate date) {
         this.memberID = memberID;
         this.height = height;
         this.weight = weight;
-        this.bmi = bmi;
         this.date = date;
     }
 
@@ -25,28 +23,20 @@ public class TrackProgress {
         this.memberID = memberID;
     }
 
-    public double getHeight() {
+    public int getHeight() {
         return height;
     }
 
-    public void setHeight(double height) {
+    public void setHeight(int height) {
         this.height = height;
     }
 
-    public double getWeight() {
+    public int getWeight() {
         return weight;
     }
 
-    public void setWeight(double weight) {
+    public void setWeight(int weight) {
         this.weight = weight;
-    }
-
-    public double getBmi() {
-        return bmi;
-    }
-
-    public void setBmi(double bmi) {
-        this.bmi = bmi;
     }
 
     public LocalDate getDate() {
