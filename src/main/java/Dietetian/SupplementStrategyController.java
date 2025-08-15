@@ -12,6 +12,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class SupplementStrategyController
 {
@@ -31,7 +32,7 @@ public class SupplementStrategyController
     public void initialize() {
         supplementComboBox.getItems().addAll("Performance & Recovery", "Health & Wellness", "Pre-Workout Enhancement", "Hydration & Electrolytes", " Special Considerations", "Timing & Integration");
     }
-
+ArrayList<Supplement> supplementArrayList = new ArrayList<>();
     @javafx.fxml.FXML
     public void saveStrategyButtonOnClick(ActionEvent actionEvent) {
         String memberID = memberIDTextField.getText();
@@ -40,6 +41,7 @@ public class SupplementStrategyController
         String supplement = supplementComboBox.getValue();
 
         Supplement supply = new Supplement(memberID, dosage, timing, supplement);
+        supplementArrayList.add(supply);
 
 
     }

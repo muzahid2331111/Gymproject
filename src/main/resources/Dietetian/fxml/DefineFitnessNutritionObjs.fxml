@@ -20,12 +20,12 @@
       <TextField layoutX="41.0" layoutY="208.0" promptText="weight" />
       <Button layoutX="165.0" layoutY="266.0" mnemonicParsing="false" onAction="#verifyButtonOnClick" prefHeight="26.0" prefWidth="63.0" text="Verify" />
       <Label fx:id="weightTextField" layoutX="47.0" layoutY="214.0" prefHeight="26.0" prefWidth="118.0" />
-      <TableView layoutX="41.0" layoutY="313.0" prefHeight="222.0" prefWidth="417.0">
+      <TableView fx:id="fitnessNutritionTableview" layoutX="41.0" layoutY="313.0" prefHeight="222.0" prefWidth="417.0">
         <columns>
-          <TableColumn prefWidth="119.99994659423828" text="Member Id" />
-          <TableColumn prefWidth="84.79998779296875" text="Height" />
-            <TableColumn prefWidth="93.60003662109375" text="Weight" />
-            <TableColumn prefWidth="118.39996337890625" text="BMI" />
+          <TableColumn fx:id="memberIDCol" prefWidth="119.99994659423828" text="Member Id" />
+          <TableColumn fx:id="heightCol" prefWidth="84.79998779296875" text="Height" />
+            <TableColumn fx:id="weightCol" prefWidth="93.60003662109375" text="Weight" />
+            <TableColumn fx:id="bmiCol" prefWidth="118.39996337890625" text="BMI" />
         </columns>
       </TableView>
       <Text layoutX="106.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fitness &amp; Nutrition Objectives">

@@ -72,8 +72,8 @@ public class TrackProgressAdjustPlanController
         }
 
         String memberID = memberIDTextField.getText();
-        int height = Integer.parseInt(heightCol.getText());
-        int weight = Integer.parseInt(weightTextField.getText());
+        double height = Double.parseDouble(heightCol.getText());
+        double weight = Double.parseDouble(weightTextField.getText());
         LocalDate date = dateDatePicker.getValue();
 
         TrackProgress trackProgress = new TrackProgress(memberID, height, weight, date);
