@@ -12,7 +12,6 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.time.LocalDate;
-import java.util.ArrayList;
 
 public class CoordinateWithTrainingController
 {
@@ -31,7 +30,7 @@ public class CoordinateWithTrainingController
     @javafx.fxml.FXML
     public void initialize() {
     }
-ArrayList<Training> trainingList = new ArrayList<>();
+
     @javafx.fxml.FXML
     public void sendCoordinationButtonOnClick(ActionEvent actionEvent) {
 
@@ -51,9 +50,6 @@ ArrayList<Training> trainingList = new ArrayList<>();
         String memberID = memberIDTextField.getText();
         String diettiming = dietaryTimingTextField.getText();
         String discussion = discussionTextArea.getText();
-        String schedule = scheduleTextField.getText();
-        Training training = new Training(memberID,  diettiming, discussion, schedule);
-        trainingList.add(training);
 
     }
 }
