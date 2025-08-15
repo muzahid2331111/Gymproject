@@ -44,6 +44,7 @@ public class RegisterNewMembersController
     private RadioButton femaleRadioButton;
     @javafx.fxml.FXML
     private RadioButton maleRadioButton;
+    ArrayList<NewMember> newMemberList = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -52,7 +53,6 @@ public class RegisterNewMembersController
         ageCol.setCellValueFactory(new PropertyValueFactory<>("age"));
         nameCol.setCellValueFactory(new PropertyValueFactory<>("name"));
     }
-    ArrayList<NewMember> newMemberList = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void saveValidateShowButtonOnClick(ActionEvent actionEvent) {
